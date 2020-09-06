@@ -1,0 +1,237 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif; 
+   scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    padding:90px 10px 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    min-height: 70vh;
+    padding: 35px 15px 25px 15px;
+    border-radius: 5px;
+    border: 3px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+.title{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    /* For Question Part */
+
+ .question-part{
+   position: absolute;
+   top: 0;
+   right: -100%;
+   width: 100%;
+   height: 100%;
+   color: #fff;
+   background-color: rgba(0,0,0,0.9);
+   transition: right 0.8s ease-in-out;
+ }
+ .question-part .content{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 90%;
+ }
+ .question-part .content h2{
+   text-align: center;
+   margin: auto;
+   padding-bottom:7px;
+   width: max-content;
+   margin-bottom: 15px;
+   border-bottom: 1px solid #fff;
+ }
+ .question-part .content p{
+   text-align: justify;
+   line-height: 1.5;
+   font-size: 1.1rem;
+ }
+
+ .cross-icon ,.go-icon{
+   position: absolute;
+   top: 26px;
+   right: 25px;
+   font-size: 40px;
+   cursor: pointer;
+ }
+
+    /* For Form Elements */
+.label{
+    display:block;
+    margin-bottom: 8px;
+}
+.input{
+    display:block;
+    font-size: 1rem;
+    width: 80%;
+    padding: 10px 8px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 1.5px solid #333;
+    resize: none;
+}
+
+.input::placeholder{
+    font-size: 12px;
+}
+
+/* For Buttons */
+.btn{
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 20px;
+    margin: 5px 5px 0 0;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    /* background-color: rgb(16, 146, 206); */
+    background-color: #333;
+    text-decoration:none ;
+    transition: transform 0.1s ease-in-out;
+}
+
+.btn:focus{
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.85);
+}
+
+/* For Result Part */
+.resultbox{
+    margin: 20px 0;
+}
+.resultbox p{
+    margin: 15px 0;
+}
+.resultbox p b{
+    margin-right:5px;
+}
+
+/* For Lists */
+ul,ol{
+    list-style-position: inside;
+}
+
+.resultbox ul{
+    list-style: none;
+    margin-bottom:25px;
+}
+.resultbox ul li{
+    padding: 8px 12px;
+    display: inline-block;
+    border: 2px solid #333;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    margin-top: 5px;
+}
+
+.resultbox ul li:first-child{
+    border-left:2px solid #333;
+}
+.resultbox ul li:last-child{
+    border-right:2px solid #333;
+}
+
+/* For Table */
+
+table{
+    width: 100%;
+    margin: 20px 0;
+}
+table,tr,td,th{
+    border-collapse: collapse;
+    border: 1px solid #555;
+}
+th{
+    padding: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #333;
+}
+td{
+    text-align: center;
+    padding: 8px 10px;
+}
+tr:nth-child(odd){
+    background-color: #fff;
+}
+tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+
+tr:hover{
+    background-color: #f5f5f5;
+}
+
+
+/* Form Table */
+  .table-box{
+    overflow-x: scroll;
+  }
+  /* .table-box::-webkit-scrollbar{
+    display: none;
+  } */
+  form table tbody td{
+    background-color: #ddd;
+    padding:8px 0px;
+  }
+  form td input{
+    display: inline-block;
+    width: 90%;
+    padding: 7px 8px;
+    border-radius: 2px;
+    border: 0;
+  }
+  form td input:focus{
+    outline: 2px solid #333;
+  }
+  td .btn{
+    display:inline-block;
+    width: auto;
+  }
+
+  /* For Alert */
+.alert{
+    display: block;
+    padding: 12px;
+    color:#000;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.success{
+    color: #fff;
+    background-color: rgb(3, 206, 3);
+}
+.danger{
+    color: #fff;
+    background-color: red;
+}
+
+@media screen and (max-width:500px){
+    .input{
+        width:100%;
+    }
+}
